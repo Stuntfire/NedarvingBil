@@ -10,6 +10,8 @@ namespace NedarvingBil
     {
         static void Main(string[] args)
         {
+            //Når bil klassen er abstract kan et nyt objekt ikke kaldes.
+            //Bil nyBil = new Bil(200000);
         }
     }
 }
