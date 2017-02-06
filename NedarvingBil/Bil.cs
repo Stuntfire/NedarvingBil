@@ -43,7 +43,7 @@ namespace NedarvingBil
             this.Mærke = mærke;
             this.BilPrisExAfgift = bilPrisExAfgift;
             this.KøbsÅr = købsÅr;
-            this.KmPrLiter = KmPrLiter;
+            this.KmPrLiter = kmPrLiter;
         }
 
         public virtual int RegistreringAfgift()

@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace NedarvingBil
 {
-    public class BenzinBil : Bil
+    public class BenzinBil 
+        //: Bil
     {
-        public BenzinBil(int pris) : base(pris)
-        {
-        }
+        //public BenzinBil(int pris) : base(pris)
+        //{
+        //}
 
-        public override int Afgift()
-        {
-            throw new NotImplementedException();
-        }
+        //public override int Afgift()
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

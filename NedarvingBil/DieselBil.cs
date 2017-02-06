@@ -33,10 +33,7 @@ namespace NedarvingBil
         /// </summary>
         /// <param name="pris"></param>
 
-        //public DieselBil(int pris):this(pris,true)
-        //{
-
-        //}
+    
 
         public override int HalvÅrligEjerafgift()
         {
@@ -47,6 +44,18 @@ namespace NedarvingBil
         //{
         //    return 1200;
         //}
+
+        public override string ToString()
+        {
+            return "Mærket på bilen er: "+ Mærke + "." +" Bilen koster uden afgift: " +
+                BilPrisExAfgift + "." + " Købsåret for bilen er: " + KøbsÅr + "." + " Bilen kører " 
+                + KmPrLiter + " km per liter. " + " Bilen har partikelfilter: " + Partikelfilter + ".";
+        }
+
+        public int GetHalvÅrigeAfgift()
+        {
+            return HalvÅrligEjerafgift();
+        }
 
     }
 }
