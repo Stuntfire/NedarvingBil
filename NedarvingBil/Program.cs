@@ -17,7 +17,7 @@ namespace NedarvingBil
 
             List<DieselBil> dbList = new List<DieselBil>();
 
-            DieselBil dbBil1 = new DieselBil("Volvo", 500000, 2014, 70, true);
+            DieselBil dbBil1 = new DieselBil("Volvo", 500000, 2014, 10, false);
             DieselBil dbBil2 = new DieselBil("Renault", 80000, 2014, 50, false);
             DieselBil dbBil3 = new DieselBil("Ford", 10000000, 2010, 60, true);
 
@@ -38,10 +38,10 @@ namespace NedarvingBil
 
             foreach (DieselBil db in dbList)
             {
-                Console.WriteLine($"{db.HalvÅrligEjerafgift()} og {db.RegistreringsAfgift()}");
+                Console.WriteLine($"Den halvårige ejer afgift er: {db.HalvÅrligEjerafgift()} og afgiften er: {db.RegistreringsAfgift()} kr");
             }
 
-            Console.WriteLine(dbBil1.RegistreringsAfgift());
+            
 
             Console.ReadLine();
 

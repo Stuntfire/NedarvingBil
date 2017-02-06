@@ -33,11 +33,48 @@ namespace NedarvingBil
         /// </summary>
         /// <param name="pris"></param>
 
-    
 
         public override int HalvÅrligEjerafgift()
         {
-            return base.HalvÅrligEjerafgift() + 500;
+            int halveÅrsEjerAfgiftDb = 0;
+
+            if (Partikelfilter == true)
+            {
+                if (KmPrLiter < 15)
+                {
+                    halveÅrsEjerAfgiftDb = 2000;
+                }
+
+                if ((KmPrLiter == 15) && (KmPrLiter <= 25))
+                {
+                    halveÅrsEjerAfgiftDb = 1000;
+                }
+
+                if (KmPrLiter > 25)
+                {
+                    halveÅrsEjerAfgiftDb = 350;
+                }
+            }
+  
+            else if (Partikelfilter == false)
+            {
+                if (KmPrLiter < 15)
+                {
+                    halveÅrsEjerAfgiftDb = 2500;
+                }
+
+                if ((KmPrLiter == 15) && (KmPrLiter <= 25))
+                {
+                    halveÅrsEjerAfgiftDb = 1500;
+                }
+
+                if (KmPrLiter > 25)
+                {
+                    halveÅrsEjerAfgiftDb = 850;
+                }
+            }
+
+            return halveÅrsEjerAfgiftDb;
         }
 
         //public override int Afgift()
