@@ -18,6 +18,8 @@ namespace NedarvingBil
 
         public int KmPrLiter { get; set; }
 
+        public int registreringsAfgift { get;  set; }
+
         /// <summary>
         /// ingen default ctor længere
         /// </summary>
@@ -46,41 +48,41 @@ namespace NedarvingBil
             this.KmPrLiter = kmPrLiter;
         }
 
-        public virtual int RegistreringAfgift()
+        public virtual int RegistreringsAfgift()
         {
-            int pris1 = 0;
-            int pris2 = 0;
+            registreringsAfgift = 0;
             if (KøbsÅr <= 2014)
             {
                 if (BilPrisExAfgift <= 80500)
                 {
-                   pris1 = BilPrisExAfgift * (105 / 100);
-                   return pris1;
+                    registreringsAfgift = BilPrisExAfgift * 105 / 100;
                 }
-                else
+                else if (BilPrisExAfgift > 80500)
                 {
-                   pris2 = (BilPrisExAfgift - 80500) * (180 / 100);
-                   return pris1 + pris2;
+                    registreringsAfgift = BilPrisExAfgift * 105/100;
+                    registreringsAfgift = registreringsAfgift + (BilPrisExAfgift - 80500) * 180/100;
                 }
             }
-            else
+            else 
             {
                 if (BilPrisExAfgift <= 81700)
                 {
-                    pris1 = BilPrisExAfgift * (105 / 100);
-                    return pris1;
+                    registreringsAfgift = BilPrisExAfgift * 105 / 100;
                 }
-                else
+                else if (BilPrisExAfgift > 81700)
                 {
-                    pris2 = (BilPrisExAfgift -81700) * (180/100);
-                    return pris1 + pris2;
+                    registreringsAfgift = BilPrisExAfgift * 105 / 100;
+                    registreringsAfgift = registreringsAfgift + (BilPrisExAfgift - 81700) * 180 / 100;
                 }
             }
+
+            return registreringsAfgift;
         }
+
 
         public int TotalPris()
         {
-           return BilPrisExAfgift + RegistreringAfgift();
+            return BilPrisExAfgift + RegistreringsAfgift();
         }
 
         public virtual int HalvÅrligEjerafgift()

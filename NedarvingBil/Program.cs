@@ -18,11 +18,11 @@ namespace NedarvingBil
             List<DieselBil> dbList = new List<DieselBil>();
 
             DieselBil dbBil1 = new DieselBil("Volvo", 500000, 2014, 70, true);
-            DieselBil dbBil2 = new DieselBil("Renault", 100000, 2016, 50, false);
-            DieselBil dbBil3 = new DieselBil("Ford", 100000, 2010, 60, true);
+            DieselBil dbBil2 = new DieselBil("Renault", 80000, 2014, 50, false);
+            DieselBil dbBil3 = new DieselBil("Ford", 10000000, 2010, 60, true);
 
-            DieselBil dbBil4 = new DieselBil("Mercedes", 700000, 2014, 70);
-            DieselBil dbBil5 = new DieselBil("Volkswagen", 500000, 2010, 90);
+            DieselBil dbBil4 = new DieselBil("Mercedes", 10000000, 2016, 70);
+            DieselBil dbBil5 = new DieselBil("Volkswagen", 500000, 2016, 90);
 
             dbList.Add(dbBil1);
             dbList.Add(dbBil2);
@@ -35,13 +35,14 @@ namespace NedarvingBil
                 Console.WriteLine(db);
             }
 
+
             foreach (DieselBil db in dbList)
             {
-                Console.WriteLine($"{db.GetHalvÅrigeAfgift()} og {db.RegistreringAfgift()}");
+                Console.WriteLine($"{db.HalvÅrligEjerafgift()} og {db.RegistreringsAfgift()}");
             }
 
-          
-           
+            Console.WriteLine(dbBil1.RegistreringsAfgift());
+
             Console.ReadLine();
 
         }

@@ -51,11 +51,7 @@ namespace NedarvingBil
                 BilPrisExAfgift + "." + " Købsåret for bilen er: " + KøbsÅr + "." + " Bilen kører " 
                 + KmPrLiter + " km per liter. " + " Bilen har partikelfilter: " + Partikelfilter + ".";
         }
-
-        public int GetHalvÅrigeAfgift()
-        {
-            return HalvÅrligEjerafgift();
-        }
+  
 
     }
 }
