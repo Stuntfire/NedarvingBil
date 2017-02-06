@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NedarvingBil
 {
-    class DieselBil : Bil
+    public class DieselBil : Bil
     {
         public bool Partikelfilter { get; private set; }
 
@@ -14,12 +14,17 @@ namespace NedarvingBil
         /// this peger på Partikelfilter propertien i klassen.
         /// Hold det med for overskueligheden for andre også.
         /// </summary>
-        /// <param name="pris"></param>
-        /// <param name="partikelfilter"></param>
 
-        public DieselBil(int pris, bool partikelfilter) : base(pris)
+        public DieselBil(string mærke, int bilPrisExAfgift, int købsÅr, int kmPrLiter, bool partikelfilter) : 
+            base(mærke, bilPrisExAfgift, købsÅr, kmPrLiter)
         {
             this.Partikelfilter = partikelfilter;
+        }
+
+        public DieselBil(string mærke, int bilPrisExAfgift, int købsÅr, int kmPrLiter)
+            :this(mærke, bilPrisExAfgift, købsÅr, kmPrLiter, true)
+        {
+
         }
 
         /// <summary>
@@ -28,20 +33,20 @@ namespace NedarvingBil
         /// </summary>
         /// <param name="pris"></param>
 
-        public DieselBil(int pris):this(pris,true)
-        {
-
-        }
-
-        //public override int afgift()
+        //public DieselBil(int pris):this(pris,true)
         //{
-        //    return base.afgift() + 200;
+
         //}
 
-        public override int Afgift()
+        public override int HalvÅrligEjerafgift()
         {
-            return 1200;
+            return base.HalvÅrligEjerafgift() + 500;
         }
+
+        //public override int Afgift()
+        //{
+        //    return 1200;
+        //}
 
     }
 }
