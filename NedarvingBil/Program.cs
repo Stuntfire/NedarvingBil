@@ -41,61 +41,85 @@ namespace NedarvingBil
                 Console.WriteLine($"Den halvårige ejer afgift er: {db.HalvÅrligEjerafgift()} og afgiften er: {db.GetRegistreringsAfgift()} kr");
             }
 
-           // DieselBil dieselbil = new DieselBil();
-           //// dieselbil.Partikelfilter = true;
-           // BenzinBil benzinbil = new BenzinBil();
-           // benzinbil.Octan = 98;
+            List<BenzinBil> bbList = new List<BenzinBil>();
 
-           // List<BenzinBil> listeBenzinbiler = new List<BenzinBil>();
-           // List<DieselBil> listDieselbiler = new List<DieselBil>();
+            BenzinBil bbBil1 = new BenzinBil("Peugot", 100000, 1990, "FK40010", 10);
+            BenzinBil bbBil2 = new BenzinBil("Ford", 70000, 1999, "FN40060", 30);
+            BenzinBil bbBil3 = new BenzinBil("KIA", 50000, 2015, "HN80030", 5);
+            BenzinBil bbBil4 = new BenzinBil("Nero", 1000000, 2014, "SD50020", 70);
+            BenzinBil bbBil5 = new BenzinBil("Paganie", 7000000, 2010, "AS10010", 25);
 
+            bbList.Add(bbBil1);
+            bbList.Add(bbBil2);
+            bbList.Add(bbBil3);
+            bbList.Add(bbBil4);
+            bbList.Add(bbBil5);
 
-           // // I denne liste kan man kun se de props som ligger i Bil klassen.
-           // List<Bil> bilListePol = new List<Bil>();
+            foreach (BenzinBil bb in bbList)
+            {
+                Console.WriteLine(bb);
+            }
 
-           // bilListePol.Add(dieselbil);
-           // bilListePol.Add(benzinbil);
+            foreach (BenzinBil bb in bbList)
+            {
+                Console.WriteLine($"Den halvårige ejer afgift er: {bb.HalvÅrligEjerafgift()} og afgiften er: {bb.GetRegistreringsAfgift()} kr");
+            }
 
-           // foreach (Bil bil  in bilListePol)
-           // {
-           //    //test på hvad de er.
-           //     Console.WriteLine(bil.HvilkenBilErJeg());
+            // DieselBil dieselbil = new DieselBil();
+            //// dieselbil.Partikelfilter = true;
+            // BenzinBil benzinbil = new BenzinBil();
+            // benzinbil.Octan = 98;
 
-           //     //Når overrider hvilkenBilErjeg i de specialiserede klasser 
-           //     //så gælder det og ikke metoden fra base klassen.
-
-           //     Console.WriteLine(bilitem.HVilkenBilErjeg());
-
-           //     //polymorfisme, is and as
-
-           //     //if (bil is DieselBil)
-           //     //{
-           //     //    //Her castes bil objekt 
-           //     //    DieselBil dieselbil1 = bil as DieselBil;
-
-           //     //    Console.WriteLine(dieselbil1.Partikelfilter);
-           //     //}
-           //     //else if (bil is BenzinBil)
-           //     //{
-           //     //    //Her castes bill objektet til at være en benzinbil og derfor kan vi nu se properties.
-           //     //    BenzinBil benzinbil1 = bil as BenzinBil;
-           //     //    Console.WriteLine(benzinbil1.Octan);
-           //     //}
-           // }
+            // List<BenzinBil> listeBenzinbiler = new List<BenzinBil>();
+            // List<DieselBil> listDieselbiler = new List<DieselBil>();
 
 
-           // //var bilListe = new List<Bil>();
-           // //bilListe.Add(new DieselBil());
-           // //bilListe.Add(new BenzinBil());
-           // //foreach (var bil in bilListe)
-           // //{
-           // //    Console.WriteLine(bil.HvilkenbilErJeg());
+            // // I denne liste kan man kun se de props som ligger i Bil klassen.
+            // List<Bil> bilListePol = new List<Bil>();
 
-           // //    if (true)
-           // //    {
+            // bilListePol.Add(dieselbil);
+            // bilListePol.Add(benzinbil);
 
-           // //    }
-           // //}
+            // foreach (Bil bil  in bilListePol)
+            // {
+            //    //test på hvad de er.
+            //     Console.WriteLine(bil.HvilkenBilErJeg());
+
+            //     //Når overrider hvilkenBilErjeg i de specialiserede klasser 
+            //     //så gælder det og ikke metoden fra base klassen.
+
+            //     Console.WriteLine(bilitem.HVilkenBilErjeg());
+
+            //     //polymorfisme, is and as
+
+            //     //if (bil is DieselBil)
+            //     //{
+            //     //    //Her castes bil objekt 
+            //     //    DieselBil dieselbil1 = bil as DieselBil;
+
+            //     //    Console.WriteLine(dieselbil1.Partikelfilter);
+            //     //}
+            //     //else if (bil is BenzinBil)
+            //     //{
+            //     //    //Her castes bill objektet til at være en benzinbil og derfor kan vi nu se properties.
+            //     //    BenzinBil benzinbil1 = bil as BenzinBil;
+            //     //    Console.WriteLine(benzinbil1.Octan);
+            //     //}
+            // }
+
+
+            // //var bilListe = new List<Bil>();
+            // //bilListe.Add(new DieselBil());
+            // //bilListe.Add(new BenzinBil());
+            // //foreach (var bil in bilListe)
+            // //{
+            // //    Console.WriteLine(bil.HvilkenbilErJeg());
+
+            // //    if (true)
+            // //    {
+
+            // //    }
+            // //}
 
 
             Console.ReadLine();

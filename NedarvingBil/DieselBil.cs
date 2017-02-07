@@ -8,7 +8,7 @@ namespace NedarvingBil
 {
     public class DieselBil : Bil
     {
-        public bool Partikelfilter { get; private set; }
+        public bool Partikelfilter { get; set; }
 
         /// <summary>
         /// this peger på Partikelfilter propertien i klassen.
@@ -84,11 +84,11 @@ namespace NedarvingBil
 
         public override string ToString()
         {
-            return "Mærket på bilen er: "+ Mærke + "." +" Bilen koster uden afgift: " +
-                BilPrisExAfgift + "." + " Købsåret for bilen er: " + KøbsÅr + "." + " Bilen kører " 
+            return "Mærket på bilen er: " + Mærke + "." + " Bilen koster uden afgift: " +
+                BilPrisExAfgift + "." + " Købsåret for bilen er: " + KøbsÅr + "." + " Bilen kører "
                 + KmPrLiter + " km per liter. " + " Bilen har partikelfilter: " + Partikelfilter + ".";
         }
-  
+
 
     }
 }

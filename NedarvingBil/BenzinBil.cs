@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace NedarvingBil
 {
-    public class BenzinBil : Bil
+    public sealed class BenzinBil : Bil
     {
-        public int Octan { get; set; }
+        //public int Octan { get; set; }
 
         public BenzinBil(string mærke, int bilPrisExAfgift, int købsÅr, string registreringsNr, int kmPrLiter) : base(mærke, bilPrisExAfgift, købsÅr, registreringsNr, kmPrLiter)
         {
@@ -24,7 +24,7 @@ namespace NedarvingBil
                 halveÅrsEjerAfgiftBb = 1200;
             }
 
-            if ((KmPrLiter == 20 ) && (KmPrLiter <= 28))
+            if ((KmPrLiter >= 20 ) && (KmPrLiter <= 28))
             {
                 halveÅrsEjerAfgiftBb = 600;
             }
@@ -34,6 +34,13 @@ namespace NedarvingBil
                 halveÅrsEjerAfgiftBb = 320;
             }
             return halveÅrsEjerAfgiftBb;
+        }
+
+        public override string ToString()
+        {
+            return "Mærket på bilen er: " + Mærke + "." + " Bilen koster uden afgift: " +
+                BilPrisExAfgift + "." + " Købsåret for bilen er: " + KøbsÅr + "." + " Bilen kører "
+                + KmPrLiter + " km per liter.";
         }
 
         //public override string HvilkenBilErJeg()
