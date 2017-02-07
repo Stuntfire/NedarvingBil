@@ -15,14 +15,14 @@ namespace NedarvingBil
         /// Hold det med for overskueligheden for andre også.
         /// </summary>
 
-        public DieselBil(string mærke, int bilPrisExAfgift, int købsÅr, int kmPrLiter, bool partikelfilter) : 
-            base(mærke, bilPrisExAfgift, købsÅr, kmPrLiter)
+        public DieselBil(string mærke, int bilPrisExAfgift, int købsÅr, string registreringsNr, int kmPrLiter, bool partikelfilter) : 
+            base(mærke, bilPrisExAfgift, købsÅr, registreringsNr, kmPrLiter)
         {
             this.Partikelfilter = partikelfilter;
         }
 
-        public DieselBil(string mærke, int bilPrisExAfgift, int købsÅr, int kmPrLiter)
-            :this(mærke, bilPrisExAfgift, købsÅr, kmPrLiter, true)
+        public DieselBil(string mærke, int bilPrisExAfgift, int købsÅr, string registreringsNr, int kmPrLiter)
+            :this(mærke, bilPrisExAfgift, købsÅr, registreringsNr, kmPrLiter, true)
         {
 
         }
