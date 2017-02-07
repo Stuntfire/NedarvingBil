@@ -12,9 +12,13 @@ namespace NedarvingBil
 
         public int Tank { get; set; }
 
-        public BenzinBil(string mærke, int bilPrisExAfgift, int købsÅr, string registreringsNr, int kmPrLiter, int tank) : base(mærke, bilPrisExAfgift, købsÅr, registreringsNr, kmPrLiter)
+        public int KmPrLiter { get; set; }
+
+        public BenzinBil(string mærke, int bilPrisExAfgift, int købsÅr, string registreringsNr, int kmPrLiter, int tank) : base(mærke, bilPrisExAfgift, købsÅr, registreringsNr)
         {
             this.Tank = tank;
+            this.KmPrLiter = kmPrLiter;
+
         }
 
         public override int HalvÅrligEjerafgift()
@@ -37,6 +41,12 @@ namespace NedarvingBil
                 halveÅrsEjerAfgiftBb = 320;
             }
             return halveÅrsEjerAfgiftBb;
+        }
+
+        public override int GetRækkeVidde()
+        {
+            return Tank * KmPrLiter;
+
         }
 
         public override string ToString()

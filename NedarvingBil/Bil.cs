@@ -16,15 +16,15 @@ namespace NedarvingBil
 
         public string RegistreringsNr { get; set; }
 
-        public int KmPrLiter { get; set; }
+        public int RegistreringsAfgift { get; set; }
 
-        private int _registreringsAfgift;
+        //private int _registreringsAfgift;
 
-        public int RegistreringsAfgift
-        {
-            get { return _registreringsAfgift; }
-            set { _registreringsAfgift = value; }
-        }
+        //public int RegistreringsAfgift
+        //{
+        //    get { return _registreringsAfgift; }
+        //    set { _registreringsAfgift = value; }
+        //}
 
         /// <summary>
         /// ingen default ctor længere
@@ -41,44 +41,44 @@ namespace NedarvingBil
         /// </summary>
         /// <returns></returns>
 
-        public Bil(string mærke, int bilPrisExAfgift, int købsÅr, string registreringsNr, int kmPrLiter)
+        public Bil(string mærke, int bilPrisExAfgift, int købsÅr, string registreringsNr) //int kmPrLiter)
         {
             this.Mærke = mærke;
             this.BilPrisExAfgift = bilPrisExAfgift;
             this.KøbsÅr = købsÅr;
             this.RegistreringsNr = registreringsNr;
-            this.KmPrLiter = kmPrLiter;
+            //this.KmPrLiter = kmPrLiter;
         }
 
         public virtual int GetRegistreringsAfgift()
         {
-            _registreringsAfgift = 0;
+            RegistreringsAfgift = 0;
             if (KøbsÅr <= 2014)
             {
                 if (BilPrisExAfgift <= 80500)
                 {
-                    _registreringsAfgift = BilPrisExAfgift * 105 / 100;
+                    RegistreringsAfgift = BilPrisExAfgift * 105 / 100;
                 }
                 else if (BilPrisExAfgift > 80500)
                 {
-                    _registreringsAfgift = BilPrisExAfgift * 105/100;
-                    _registreringsAfgift = _registreringsAfgift + (BilPrisExAfgift - 80500) * 180/100;
+                    RegistreringsAfgift = BilPrisExAfgift * 105/100;
+                    RegistreringsAfgift = RegistreringsAfgift + (BilPrisExAfgift - 80500) * 180/100;
                 }
             }
             else 
             {
                 if (BilPrisExAfgift <= 81700)
                 {
-                    _registreringsAfgift = BilPrisExAfgift * 105 / 100;
+                    RegistreringsAfgift = BilPrisExAfgift * 105 / 100;
                 }
                 else if (BilPrisExAfgift > 81700)
                 {
-                    _registreringsAfgift = BilPrisExAfgift * 105 / 100;
-                    _registreringsAfgift = _registreringsAfgift + (BilPrisExAfgift - 81700) * 180 / 100;
+                    RegistreringsAfgift = BilPrisExAfgift * 105 / 100;
+                    RegistreringsAfgift = RegistreringsAfgift + (BilPrisExAfgift - 81700) * 180 / 100;
                 }
             }
 
-            return _registreringsAfgift;
+            return RegistreringsAfgift;
         }
 
         public int TotalPris()

@@ -12,16 +12,19 @@ namespace NedarvingBil
 
         public int Tank { get; set; }
 
+        public int KmPrLiter { get; set; }
+
         /// <summary>
         /// this peger på Partikelfilter propertien i klassen.
         /// Hold det med for overskueligheden for andre også.
         /// </summary>
 
         public DieselBil(string mærke, int bilPrisExAfgift, int købsÅr, string registreringsNr, int kmPrLiter, bool partikelfilter, int tank) : 
-            base(mærke, bilPrisExAfgift, købsÅr, registreringsNr, kmPrLiter)
+            base(mærke, bilPrisExAfgift, købsÅr, registreringsNr) //kmPrLiter)
         {
             this.Partikelfilter = partikelfilter;
             this.Tank = tank;
+            this.KmPrLiter = kmPrLiter;
         }
 
         public DieselBil(string mærke, int bilPrisExAfgift, int købsÅr, string registreringsNr, int kmPrLiter,int tank)
@@ -84,6 +87,12 @@ namespace NedarvingBil
         //{
         //    return 1200;
         //}
+
+        public override int GetRækkeVidde()
+        {
+            return Tank* KmPrLiter;
+           
+        }
 
         public override string ToString()
         {

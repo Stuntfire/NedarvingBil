@@ -38,7 +38,7 @@ namespace NedarvingBil
 
             foreach (DieselBil db in dbList)
             {
-                Console.WriteLine($"Den halvårige ejer afgift er: {db.HalvÅrligEjerafgift()} og afgiften er: {db.GetRegistreringsAfgift()} kr");
+                Console.WriteLine($"Den halvårige ejer afgift er: {db.HalvÅrligEjerafgift()} og afgiften er: {db.GetRegistreringsAfgift()} kr og rækkevidden er: {db.GetRækkeVidde()}");
             }
 
             List<BenzinBil> bbList = new List<BenzinBil>();
@@ -62,7 +62,31 @@ namespace NedarvingBil
 
             foreach (BenzinBil bb in bbList)
             {
-                Console.WriteLine($"Den halvårige ejer afgift er: {bb.HalvÅrligEjerafgift()} og afgiften er: {bb.GetRegistreringsAfgift()} kr");
+                Console.WriteLine($"Den halvårige ejer afgift er: {bb.HalvÅrligEjerafgift()} og afgiften er: {bb.GetRegistreringsAfgift()} kr og rækkevidden er: {bb.GetRækkeVidde()}");
+            }
+
+            List<ElBil> ebList = new List<ElBil>();
+
+            ElBil ebBil1 = new ElBil("Tesla", 1000000, 2016, "HD30010", 5, 30);
+            ElBil ebBil2 = new ElBil("Tesla", 1000000, 2010, "FD60010", 3, 30);
+            ElBil ebBil3 = new ElBil("Nissan", 500000, 2011, "PK90010", 2, 20);
+            ElBil ebBil4 = new ElBil("Ford", 1000000, 2014, "KG20010", 6, 40);
+            ElBil ebBil5 = new ElBil("Tesla", 5000000, 2015, "LL90010", 8, 40);
+
+            ebList.Add(ebBil1);
+            ebList.Add(ebBil2);
+            ebList.Add(ebBil3);
+            ebList.Add(ebBil4);
+            ebList.Add(ebBil5);
+
+            foreach (ElBil eb in ebList)
+            {
+                Console.WriteLine(eb);
+            }
+
+            foreach (ElBil eb in ebList)
+            {
+                Console.WriteLine($"Den halvårige ejer afgift er: {eb.HalvÅrligEjerafgift()} og afgiften er: {eb.GetRegistreringsAfgift()} kr og rækkevidden er: {eb.GetRækkeVidde()}");
             }
 
             // DieselBil dieselbil = new DieselBil();
