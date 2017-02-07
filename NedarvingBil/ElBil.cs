@@ -13,6 +13,8 @@ namespace NedarvingBil
 
         public int KmPrKw { get; set; }
 
+        public int LadeTid { get; set; }
+
         public ElBil(string mærke, int bilPrisExAfgift, int købsÅr, string registreringsNr, int kmPrKW, int batteriKapacitet) 
             : base(mærke, bilPrisExAfgift, købsÅr, registreringsNr)
         {
