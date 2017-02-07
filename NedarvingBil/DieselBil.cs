@@ -94,6 +94,11 @@ namespace NedarvingBil
            
         }
 
+        public override string HvilkenBilErJeg()
+        {
+            return "Jeg er en class DieselBil";
+        }
+
         public override string ToString()
         {
             return "Mærket på bilen er: " + Mærke + "." + " Bilen koster uden afgift: " +

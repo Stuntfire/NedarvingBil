@@ -96,73 +96,49 @@ namespace NedarvingBil
             bilListePol.Add(dbBil3);
             bilListePol.Add(dbBil4);
             bilListePol.Add(dbBil5);
+
             bilListePol.Add(bbBil1);
             bilListePol.Add(bbBil2);
             bilListePol.Add(bbBil3);
             bilListePol.Add(bbBil4);
             bilListePol.Add(bbBil5);
+
             bilListePol.Add(ebBil1);
             bilListePol.Add(ebBil2);
             bilListePol.Add(ebBil3);
             bilListePol.Add(ebBil4);
             bilListePol.Add(ebBil5);
 
-            // DieselBil dieselbil = new DieselBil();
-            //// dieselbil.Partikelfilter = true;
-            // BenzinBil benzinbil = new BenzinBil();
-            // benzinbil.Octan = 98;
+            //polymorfisme, is and as
 
-            // List<BenzinBil> listeBenzinbiler = new List<BenzinBil>();
-            // List<DieselBil> listDieselbiler = new List<DieselBil>();
+            foreach (Bil bil in bilListePol)
+            {
+                if (bil is DieselBil)
+                {
+                    //Her castes bil objekt 
+                    DieselBil dieselbil1 = bil as DieselBil;
+                    Console.WriteLine(dieselbil1.HvilkenBilErJeg());
+                    Console.WriteLine(dieselbil1);
+                    Console.WriteLine($"Den halvårige ejer afgift er: {dieselbil1.HalvÅrligEjerafgift()} og afgiften er: {dieselbil1.GetRegistreringsAfgift()} kr og rækkevidden er: {dieselbil1.GetRækkeVidde()}");
+                }
 
+                else if (bil is BenzinBil)
+                {
+                    //Her castes bill objektet til at være en benzinbil og derfor kan vi nu se properties.
+                    BenzinBil benzinbil1 = bil as BenzinBil;
+                    Console.WriteLine(benzinbil1.HvilkenBilErJeg());
+                    Console.WriteLine(benzinbil1);
+                    Console.WriteLine($"Den halvårige ejer afgift er: {benzinbil1.HalvÅrligEjerafgift()} og afgiften er: {benzinbil1.GetRegistreringsAfgift()} kr og rækkevidden er: {benzinbil1.GetRækkeVidde()}");
+                }
 
-            // // I denne liste kan man kun se de props som ligger i Bil klassen.
-            // List<Bil> bilListePol = new List<Bil>();
-
-            // bilListePol.Add(dieselbil);
-            // bilListePol.Add(benzinbil);
-
-            // foreach (Bil bil  in bilListePol)
-            // {
-            //    //test på hvad de er.
-            //     Console.WriteLine(bil.HvilkenBilErJeg());
-
-            //     //Når overrider hvilkenBilErjeg i de specialiserede klasser 
-            //     //så gælder det og ikke metoden fra base klassen.
-
-            //     Console.WriteLine(bilitem.HVilkenBilErjeg());
-
-            //     //polymorfisme, is and as
-
-            //     //if (bil is DieselBil)
-            //     //{
-            //     //    //Her castes bil objekt 
-            //     //    DieselBil dieselbil1 = bil as DieselBil;
-
-            //     //    Console.WriteLine(dieselbil1.Partikelfilter);
-            //     //}
-            //     //else if (bil is BenzinBil)
-            //     //{
-            //     //    //Her castes bill objektet til at være en benzinbil og derfor kan vi nu se properties.
-            //     //    BenzinBil benzinbil1 = bil as BenzinBil;
-            //     //    Console.WriteLine(benzinbil1.Octan);
-            //     //}
-            // }
-
-
-            // //var bilListe = new List<Bil>();
-            // //bilListe.Add(new DieselBil());
-            // //bilListe.Add(new BenzinBil());
-            // //foreach (var bil in bilListe)
-            // //{
-            // //    Console.WriteLine(bil.HvilkenbilErJeg());
-
-            // //    if (true)
-            // //    {
-
-            // //    }
-            // //}
-
+                else if (bil is ElBil)
+                {
+                    ElBil elbil1 = bil as ElBil;
+                    Console.WriteLine(elbil1.HvilkenBilErJeg());
+                    Console.WriteLine(elbil1);   
+                    Console.WriteLine($"Den halvårige ejer afgift er: {elbil1.HalvÅrligEjerafgift()} og afgiften er: {elbil1.GetRegistreringsAfgift()} kr og rækkevidden er: {elbil1.GetRækkeVidde()}");
+                }
+            }
 
             Console.ReadLine();
 

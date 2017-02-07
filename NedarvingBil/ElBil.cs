@@ -37,6 +37,11 @@ namespace NedarvingBil
             return BatteriKapacitet * KmPrKw;
         }
 
+        public override string HvilkenBilErJeg()
+        {
+            return "Jeg er en class ElBil";
+        }
+
         public override string ToString()
         {
             return "Mærket på bilen er: " + Mærke + "." + " Bilen koster uden afgift: " +

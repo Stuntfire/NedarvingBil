@@ -8,7 +8,6 @@ namespace NedarvingBil
 {
     public sealed class BenzinBil : Bil
     {
-        //public int Octan { get; set; }
 
         public int Tank { get; set; }
 
@@ -18,12 +17,10 @@ namespace NedarvingBil
         {
             this.Tank = tank;
             this.KmPrLiter = kmPrLiter;
-
         }
 
         public override int HalvÅrligEjerafgift()
         {
-      
             int halveÅrsEjerAfgiftBb = 0;
 
             if (KmPrLiter < 20)
@@ -46,7 +43,11 @@ namespace NedarvingBil
         public override int GetRækkeVidde()
         {
             return Tank * KmPrLiter;
+        }
 
+        public override string HvilkenBilErJeg()
+        {
+            return "Jeg er en class BenzinBil";
         }
 
         public override string ToString()
@@ -55,20 +56,5 @@ namespace NedarvingBil
                 BilPrisExAfgift + "." + " Købsåret for bilen er: " + KøbsÅr + "." + " Bilen kører "
                 + KmPrLiter + " km per liter." + "Tanken kan indeholde: " + Tank + ".";
         }
-
-        //public override string HvilkenBilErJeg()
-        //{
-        //    return "Jeg er en class benzinbil";
-        //}
-
-
-        //public BenzinBil(int pris) : base(pris)
-        //{
-        //}
-
-        //public override int Afgift()
-        //{
-        //    throw new NotImplementedException();
-        //}
     }
 }

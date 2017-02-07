@@ -92,7 +92,10 @@ namespace NedarvingBil
         }
 
         public abstract int GetRækkeVidde();
-       
 
+        //Når overrider hvilkenBilErjeg i de specialiserede klasser 
+        //så gælder det og ikke metoden fra base klassen.
+
+        public abstract string HvilkenBilErJeg();
     }
 }
