@@ -89,7 +89,7 @@ namespace NedarvingBil
                 Console.WriteLine($"Den halvårige ejer afgift er: {eb.HalvÅrligEjerafgift()} og afgiften er: {eb.GetRegistreringsAfgift()} kr og rækkevidden er: {eb.GetRækkeVidde()}");
             }
 
-            List<Bil> bilListePol = new List<Bil>();
+            List<IBil> bilListePol = new List<IBil>();
 
             bilListePol.Add(dbBil1);
             bilListePol.Add(dbBil2);
