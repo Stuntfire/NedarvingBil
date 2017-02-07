@@ -136,7 +136,7 @@ namespace NedarvingBil
                     ElBil elbil1 = bil as ElBil;
                     Console.WriteLine(elbil1.HvilkenBilErJeg());
                     Console.WriteLine(elbil1);   
-                    Console.WriteLine($"Den halvårige ejer afgift er: {elbil1.HalvÅrligEjerafgift()} og afgiften er: {elbil1.GetRegistreringsAfgift()} kr og rækkevidden er: {elbil1.GetRækkeVidde()}");
+                    Console.WriteLine($"Den halvårige ejer afgift er: {elbil1.HalvÅrligEjerafgift()} og afgiften er: {elbil1.GetRegistreringsAfgift()} kr. Rækkevidden er: {elbil1.GetRækkeVidde()} og dens elmoter har en ladetid på {elbil1.GetLadeTid()} min.");
                 }
             }
 

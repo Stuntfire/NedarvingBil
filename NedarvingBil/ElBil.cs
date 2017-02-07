@@ -41,7 +41,7 @@ namespace NedarvingBil
 
         public int GetLadeTid()
         {
-            return 5;
+            return 15;
         }
 
         public override string HvilkenBilErJeg()
