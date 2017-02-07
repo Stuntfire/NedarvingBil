@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NedarvingBil
 {
-    public class ElBil:Bil
+    public class ElBil : Bil, IelMotor
     {
 
         public int BatteriKapacitet { get; set; }
@@ -39,6 +39,11 @@ namespace NedarvingBil
             return BatteriKapacitet * KmPrKw;
         }
 
+        public int GetLadeTid()
+        {
+            return 5;
+        }
+
         public override string HvilkenBilErJeg()
         {
             return "Jeg er en class ElBil";
@@ -51,6 +56,5 @@ namespace NedarvingBil
                 + "Kilometer per kilowat kan indeholde: " + KmPrKw + "." 
                 + "BatteriKapaciteten er: " + BatteriKapacitet + ".";
         }
-
     }
 }
