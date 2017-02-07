@@ -89,6 +89,24 @@ namespace NedarvingBil
                 Console.WriteLine($"Den halvårige ejer afgift er: {eb.HalvÅrligEjerafgift()} og afgiften er: {eb.GetRegistreringsAfgift()} kr og rækkevidden er: {eb.GetRækkeVidde()}");
             }
 
+            List<Bil> bilListePol = new List<Bil>();
+
+            bilListePol.Add(dbBil1);
+            bilListePol.Add(dbBil2);
+            bilListePol.Add(dbBil3);
+            bilListePol.Add(dbBil4);
+            bilListePol.Add(dbBil5);
+            bilListePol.Add(bbBil1);
+            bilListePol.Add(bbBil2);
+            bilListePol.Add(bbBil3);
+            bilListePol.Add(bbBil4);
+            bilListePol.Add(bbBil5);
+            bilListePol.Add(ebBil1);
+            bilListePol.Add(ebBil2);
+            bilListePol.Add(ebBil3);
+            bilListePol.Add(ebBil4);
+            bilListePol.Add(ebBil5);
+
             // DieselBil dieselbil = new DieselBil();
             //// dieselbil.Partikelfilter = true;
             // BenzinBil benzinbil = new BenzinBil();
