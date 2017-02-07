@@ -81,7 +81,6 @@ namespace NedarvingBil
             return _registreringsAfgift;
         }
 
-
         public int TotalPris()
         {
             return BilPrisExAfgift + GetRegistreringsAfgift();
@@ -92,7 +91,8 @@ namespace NedarvingBil
             return 1000;
         }
 
-
+        public abstract int GetRækkeVidde();
+       
 
     }
 }

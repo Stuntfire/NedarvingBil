@@ -10,19 +10,22 @@ namespace NedarvingBil
     {
         public bool Partikelfilter { get; set; }
 
+        public int Tank { get; set; }
+
         /// <summary>
         /// this peger på Partikelfilter propertien i klassen.
         /// Hold det med for overskueligheden for andre også.
         /// </summary>
 
-        public DieselBil(string mærke, int bilPrisExAfgift, int købsÅr, string registreringsNr, int kmPrLiter, bool partikelfilter) : 
+        public DieselBil(string mærke, int bilPrisExAfgift, int købsÅr, string registreringsNr, int kmPrLiter, bool partikelfilter, int tank) : 
             base(mærke, bilPrisExAfgift, købsÅr, registreringsNr, kmPrLiter)
         {
             this.Partikelfilter = partikelfilter;
+            this.Tank = tank;
         }
 
-        public DieselBil(string mærke, int bilPrisExAfgift, int købsÅr, string registreringsNr, int kmPrLiter)
-            :this(mærke, bilPrisExAfgift, købsÅr, registreringsNr, kmPrLiter, true)
+        public DieselBil(string mærke, int bilPrisExAfgift, int købsÅr, string registreringsNr, int kmPrLiter,int tank)
+            :this(mærke, bilPrisExAfgift, købsÅr, registreringsNr, kmPrLiter, true, tank)
         {
 
         }
@@ -86,7 +89,7 @@ namespace NedarvingBil
         {
             return "Mærket på bilen er: " + Mærke + "." + " Bilen koster uden afgift: " +
                 BilPrisExAfgift + "." + " Købsåret for bilen er: " + KøbsÅr + "." + " Bilen kører "
-                + KmPrLiter + " km per liter. " + " Bilen har partikelfilter: " + Partikelfilter + ".";
+                + KmPrLiter + " km per liter. " + " Bilen har partikelfilter: " + Partikelfilter + "." + "Tanken kan indeholde: " + Tank + ".";
         }
 
 

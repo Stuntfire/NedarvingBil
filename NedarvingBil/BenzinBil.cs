@@ -10,8 +10,11 @@ namespace NedarvingBil
     {
         //public int Octan { get; set; }
 
-        public BenzinBil(string mærke, int bilPrisExAfgift, int købsÅr, string registreringsNr, int kmPrLiter) : base(mærke, bilPrisExAfgift, købsÅr, registreringsNr, kmPrLiter)
+        public int Tank { get; set; }
+
+        public BenzinBil(string mærke, int bilPrisExAfgift, int købsÅr, string registreringsNr, int kmPrLiter, int tank) : base(mærke, bilPrisExAfgift, købsÅr, registreringsNr, kmPrLiter)
         {
+            this.Tank = tank;
         }
 
         public override int HalvÅrligEjerafgift()
@@ -40,7 +43,7 @@ namespace NedarvingBil
         {
             return "Mærket på bilen er: " + Mærke + "." + " Bilen koster uden afgift: " +
                 BilPrisExAfgift + "." + " Købsåret for bilen er: " + KøbsÅr + "." + " Bilen kører "
-                + KmPrLiter + " km per liter.";
+                + KmPrLiter + " km per liter." + "Tanken kan indeholde: " + Tank + ".";
         }
 
         //public override string HvilkenBilErJeg()

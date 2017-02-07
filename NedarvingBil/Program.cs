@@ -17,12 +17,12 @@ namespace NedarvingBil
 
             List<DieselBil> dbList = new List<DieselBil>();
 
-            DieselBil dbBil1 = new DieselBil("Volvo", 500000, 2014, "BC50010", 10, false);
-            DieselBil dbBil2 = new DieselBil("Renault", 80000, 2014, "AC50010", 50, false);
-            DieselBil dbBil3 = new DieselBil("Ford", 10000000, 2010, "XO20010", 60, true);
+            DieselBil dbBil1 = new DieselBil("Volvo", 500000, 2014, "BC50010", 10, false, 20);
+            DieselBil dbBil2 = new DieselBil("Renault", 80000, 2014, "AC50010", 50, false,30);
+            DieselBil dbBil3 = new DieselBil("Ford", 10000000, 2010, "XO20010", 60, true,50);
 
-            DieselBil dbBil4 = new DieselBil("Mercedes", 10000000, 2016, "YO90010", 70);
-            DieselBil dbBil5 = new DieselBil("Volkswagen", 500000, 2016, "DO80010", 90);
+            DieselBil dbBil4 = new DieselBil("Mercedes", 10000000, 2016, "YO90010", 70, 20);
+            DieselBil dbBil5 = new DieselBil("Volkswagen", 500000, 2016, "DO80010", 90, 30);
 
             dbList.Add(dbBil1);
             dbList.Add(dbBil2);
@@ -43,11 +43,11 @@ namespace NedarvingBil
 
             List<BenzinBil> bbList = new List<BenzinBil>();
 
-            BenzinBil bbBil1 = new BenzinBil("Peugot", 100000, 1990, "FK40010", 10);
-            BenzinBil bbBil2 = new BenzinBil("Ford", 70000, 1999, "FN40060", 30);
-            BenzinBil bbBil3 = new BenzinBil("KIA", 50000, 2015, "HN80030", 5);
-            BenzinBil bbBil4 = new BenzinBil("Nero", 1000000, 2014, "SD50020", 70);
-            BenzinBil bbBil5 = new BenzinBil("Paganie", 7000000, 2010, "AS10010", 25);
+            BenzinBil bbBil1 = new BenzinBil("Peugot", 100000, 1990, "FK40010", 10,50);
+            BenzinBil bbBil2 = new BenzinBil("Ford", 70000, 1999, "FN40060", 30, 40);
+            BenzinBil bbBil3 = new BenzinBil("KIA", 50000, 2015, "HN80030", 5, 30);
+            BenzinBil bbBil4 = new BenzinBil("Nero", 1000000, 2014, "SD50020", 70, 60);
+            BenzinBil bbBil5 = new BenzinBil("Paganie", 7000000, 2010, "AS10010", 25, 15);
 
             bbList.Add(bbBil1);
             bbList.Add(bbBil2);
