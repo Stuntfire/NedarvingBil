@@ -91,7 +91,6 @@ namespace NedarvingBil
         public override int GetRækkeVidde()
         {
             return Tank* KmPrLiter;
-           
         }
 
         public override string HvilkenBilErJeg()

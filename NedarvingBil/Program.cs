@@ -113,6 +113,13 @@ namespace NedarvingBil
 
             foreach (Bil bil in bilListePol)
             {
+                if (bil is IelMotor)
+                {
+                    IelMotor biltestI = bil as IelMotor;
+                    Console.WriteLine("IelMotor Interface test");
+                    Console.WriteLine(biltestI.GetLadeTid());
+                }
+
                 if (bil is DieselBil)
                 {
                     //Her castes bil objekt 
@@ -139,6 +146,8 @@ namespace NedarvingBil
                     Console.WriteLine($"Den halvårige ejer afgift er: {elbil1.HalvÅrligEjerafgift()} og afgiften er: {elbil1.GetRegistreringsAfgift()} kr. Rækkevidden er: {elbil1.GetRækkeVidde()} og dens elmoter har en ladetid på {elbil1.GetLadeTid()} min.");
                 }
             }
+
+           
 
             Console.ReadLine();
 
