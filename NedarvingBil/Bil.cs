@@ -61,7 +61,7 @@ namespace NedarvingBil
                 }
                 else if (BilPrisExAfgift > 80500)
                 {
-                    RegistreringsAfgift = BilPrisExAfgift * 105/100;
+                    RegistreringsAfgift = 80500 * 105/100;
                     RegistreringsAfgift = RegistreringsAfgift + (BilPrisExAfgift - 80500) * 180/100;
                 }
             }
@@ -73,12 +73,11 @@ namespace NedarvingBil
                 }
                 else if (BilPrisExAfgift > 81700)
                 {
-                    RegistreringsAfgift = BilPrisExAfgift * 105 / 100;
+                    RegistreringsAfgift = 81700 * 105 / 100;
                     RegistreringsAfgift = RegistreringsAfgift + (BilPrisExAfgift - 81700) * 180 / 100;
                 }
             }
-
-            return RegistreringsAfgift;
+                return RegistreringsAfgift;
         }
 
         public int TotalPris()
