@@ -120,6 +120,7 @@ namespace NedarvingBil
                     Console.WriteLine(biltestI.GetLadeTid());
                 }
 
+
                 if (bil is DieselBil)
                 {
                     //Her castes bil objekt 
