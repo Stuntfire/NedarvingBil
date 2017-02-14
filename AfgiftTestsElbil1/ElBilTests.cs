@@ -76,5 +76,6 @@ namespace NedarvingBil.Tests
         }
 
         // Mangler at teste elbiler årgang 2015
+        // tilføjet en kommentar
     }
 }
